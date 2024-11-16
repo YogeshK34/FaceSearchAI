@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SAAS Starter Kit",
+  title: "Face SearchAI",
   description: "SAAS Starter Kit with Stripe, Supabase, Postgres",
 };
 

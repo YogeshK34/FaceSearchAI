@@ -70,7 +70,6 @@ export default function Dashboard() {
               <Button
                 variant="ghost"
                 onClick={toggleMenu}
-                aria-label="Main menu"
                 aria-expanded="false"
               >
                 {isMenuOpen ? (
