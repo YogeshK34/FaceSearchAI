@@ -28,6 +28,7 @@ A feature-rich web application offering a beautiful landing page, seamless payme
 ![Payment Completed](/payment-completed.png)
 ![Payment Received](/stripe-dashboard.png)
 
+
 ### 3. Database and Authentication
 - **PostgreSQL Database**: Stores user data securely.
 - **Supabase Oauth Authentication**:
