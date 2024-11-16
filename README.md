@@ -13,8 +13,6 @@ A feature-rich web application offering a beautiful landing page, seamless payme
 - **Sign In/Sign Up Functionality**: Users can register or log in seamlessly.
 - **Image Uploader**: Upload images directly or search online for images with internet integration.
 
-![Landing Page](/landing-page.png)
-
 ### 2. Payment Functionality
 - **Stripe Checkout Integration**: 
   - Users can complete payments securely.
@@ -22,12 +20,6 @@ A feature-rich web application offering a beautiful landing page, seamless payme
 - **Billing and Webhooks**:
   - Real-time updates for payment events.
   - Enhanced user experience with detailed billing.
-
-![Pricing](/pricing.png)
-![Payment](/payment.png)
-![Payment Completed](/payment-completed.png)
-![Payment Received](/stripe-dashboard.png)
-
 
 ### 3. Database and Authentication
 - **PostgreSQL Database**: Stores user data securely.
