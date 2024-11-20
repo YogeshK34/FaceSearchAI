@@ -14,7 +14,7 @@ const stripe = new Stripe(stripeSecretKey, {
 });
 
 // Define the public URL, defaulting to localhost in development
-const PUBLIC_URL = process.env.NEXT_PUBLIC_WEBSITE_URL || "http://localhost:3000";
+const PUBLIC_URL = process.env.NEXT_PUBLIC_WEBSITE_URL || "https://face-search-ai-4qmn.vercel.app/";
 
 // Define the currency type
 const currencyType = "usd";

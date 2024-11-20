@@ -5,7 +5,7 @@ import { revalidatePath } from 'next/cache'
 import { createStripeCustomer } from '@/utils/stripe/api'
 import { db } from '@/utils/db/db'
 import { usersTable } from '@/utils/db/schema'
-const PUBLIC_URL = process.env.NEXT_PUBLIC_WEBSITE_URL ? process.env.NEXT_PUBLIC_WEBSITE_URL : "http://localhost:3000"
+const PUBLIC_URL = process.env.NEXT_PUBLIC_WEBSITE_URL ? process.env.NEXT_PUBLIC_WEBSITE_URL : "https://face-search-ai-4qmn.vercel.app/"
 export async function resetPassword(currentState: { message: string }, formData: FormData) {
 
     const supabase = createClient()

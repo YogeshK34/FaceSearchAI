@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    var _ = { label: 0, sent: function () { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function () { return this; }), g;
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
@@ -48,7 +48,7 @@ var stripe = new stripe_1.default(stripeSecretKey, {
     apiVersion: "2024-06-20", // Optional but ensures consistent API behavior
 });
 // Define the public URL, defaulting to localhost in development
-var PUBLIC_URL = process.env.NEXT_PUBLIC_WEBSITE_URL || "http://localhost:3000";
+var PUBLIC_URL = process.env.NEXT_PUBLIC_WEBSITE_URL || "https://face-search-ai-4qmn.vercel.app/";
 // Define the currency type
 var currencyType = "usd";
 var plans = [
@@ -80,30 +80,32 @@ var plans = [
     }
 ];
 // Create a new product in Stripe
-plans.forEach(function (plan) { return __awaiter(void 0, void 0, void 0, function () {
-    var product, price;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, stripe.products.create({
+plans.forEach(function (plan) {
+    return __awaiter(void 0, void 0, void 0, function () {
+        var product, price;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, stripe.products.create({
                     name: plan.name,
                     marketing_features: plan.features
                 })];
-            case 1:
-                product = _a.sent();
-                return [4 /*yield*/, stripe.prices.create({
+                case 1:
+                    product = _a.sent();
+                    return [4 /*yield*/, stripe.prices.create({
                         product: product.id,
                         unit_amount: plan.price,
                         currency: currencyType,
                     })];
-            case 2:
-                price = _a.sent();
-                return [4 /*yield*/, stripe.products.update(product.id, { 'default_price': price.id })];
-            case 3:
-                _a.sent();
-                return [2 /*return*/];
-        }
+                case 2:
+                    price = _a.sent();
+                    return [4 /*yield*/, stripe.products.update(product.id, { 'default_price': price.id })];
+                case 3:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
     });
-}); });
+});
 // Add webhook
 stripe.webhookEndpoints.create({
     enabled_events: ['customer.subscription.created',
