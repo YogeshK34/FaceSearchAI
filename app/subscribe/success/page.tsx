@@ -30,7 +30,7 @@ export default function SubscribeSuccess() {
 
         <CardFooter className="flex-col text-center">
           <Button className="w-full text-sm ">
-            <Link href="/dashboard">Go To Dashboard</Link>
+            <Link href="/page1">Go To Dashboard</Link>
           </Button>
         </CardFooter>
       </Card>

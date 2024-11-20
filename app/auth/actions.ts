@@ -87,7 +87,7 @@ export async function loginUser(currentState: { message: string }, formData: For
     }
 
     revalidatePath('/', 'layout')
-    redirect('/dashboard')
+    redirect('/page1')
 }
 
 

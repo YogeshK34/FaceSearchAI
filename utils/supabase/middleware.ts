@@ -53,7 +53,7 @@ export async function updateSession(request: NextRequest) {
     }
     // // If user is logged in, redirect to dashboard
     if (user && request.nextUrl.pathname === '/') {
-        url.pathname = '/dashboard'
+        url.pathname = '/page1'
         return NextResponse.redirect(url)
     }
     // IMPORTANT: You *must* return the supabaseResponse object as it is. If you're

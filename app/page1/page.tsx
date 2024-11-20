@@ -167,21 +167,39 @@ export default function Dashboard() {
               and fast results.
             </p>
           </div>
-          <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3 ">
             {[
               {
                 title: "High Accuracy",
-                description:
-                  "Our AI model ensures precise face matching results.",
+                image:
+                  "https://assets-global.website-files.com/63ccf2f0ea97be12ead278ed/6544d99ac7361a60640b3ebd_data-validation-main.webp",
+                description: `
+      Our AI model ensures precise face matching results, leveraging advanced
+      algorithms trained on diverse datasets. This technology eliminates false
+      positives, making it perfect for security and investigative use cases.
+      Identify individuals with unmatched precision, even in challenging conditions.
+    `,
               },
               {
                 title: "Fast Processing",
-                description: "Get search results in seconds, not minutes.",
+                image:
+                  "https://www.care.biz/assets/templates/advance/img/what-is-processor-speed-and-why-is-it-important.jpg",
+                description: `
+      Get search results in seconds, not minutes. Our high-speed processing
+      infrastructure ensures that your face searches are completed almost
+      instantly, even when analyzing millions of records. Stay ahead of time-critical
+      situations with unmatched efficiency.
+    `,
               },
               {
                 title: "Large Database",
-                description:
-                  "Search across millions of faces from various sources.",
+                image: "https://wallpaperaccess.com/full/2052220.jpg",
+                description: `
+      Search across millions of faces from various sources with unparalleled scalability. 
+      Our extensive database includes diverse demographics, ensuring inclusive 
+      and comprehensive search results. Whether for public safety or enterprise 
+      applications, our database is built to meet your needs.
+    `,
               },
             ].map((feature, index) => (
               <div
@@ -192,6 +210,11 @@ export default function Dashboard() {
                   <h3 className="text-lg font-medium text-gray-900">
                     {feature.title}
                   </h3>
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-32 object-cover"
+                  />
                   <p className="mt-2 text-base text-gray-500">
                     {feature.description}
                   </p>
@@ -215,18 +238,24 @@ export default function Dashboard() {
                 role: "Security Analyst",
                 content:
                   "FaceSearch has revolutionized our investigation process. It's fast, accurate, and easy to use.",
+                image:
+                  "https://th.bing.com/th/id/OIP.DjF9H3TvqUxOELr1AtF_cAAAAA?rs=1&pid=ImgDetMain",
               },
               {
                 name: "Jane Smith",
                 role: "Private Investigator",
                 content:
                   "I've tried many face search tools, but FaceSearch is by far the most reliable and comprehensive.",
+                image:
+                  "https://th.bing.com/th/id/OIP.2pLK8-jA5YlpsiF9sl3axwHaHa?w=600&h=600&rs=1&pid=ImgDetMain",
               },
               {
                 name: "Mike Johnson",
                 role: "Law Enforcement Officer",
                 content:
                   "FaceSearch has become an indispensable tool in our daily operations. It's a game-changer.",
+                image:
+                  "https://images.squarespace-cdn.com/content/v1/620e83835f7c485d7d85b295/1f6749da-8b44-40c6-b656-fd5d4cda7baf/Matthew+Lacasse+Headshot.png",
               },
             ].map((testimonial, index) => (
               <Card key={index}>
@@ -234,7 +263,7 @@ export default function Dashboard() {
                   <div className="flex items-center">
                     <Avatar>
                       <AvatarImage
-                        src={`/placeholder.svg?height=40&width=40`}
+                        src={testimonial.image}
                         alt={testimonial.name}
                       />
                       <AvatarFallback>
