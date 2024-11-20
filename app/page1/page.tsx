@@ -12,9 +12,13 @@ import {
 } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Search, Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
+import confetti from "canvas-confetti";
 
 export default function Dashboard() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const router = useRouter();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -61,10 +65,20 @@ export default function Dashboard() {
               <Button
                 variant="ghost"
                 className="text-gray-500 hover:text-gray-700"
+                onClick={() => {
+                  router.push("/login");
+                }}
               >
                 Sign In
               </Button>
-              <Button className="ml-4">Sign Up</Button>
+              <Button
+                className="ml-4"
+                onClick={() => {
+                  router.push("/login");
+                }}
+              >
+                Sign Up
+              </Button>
             </div>
             <div className="-mr-2 flex items-center sm:hidden">
               <Button
@@ -359,7 +373,12 @@ export default function Dashboard() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">
+                  <Button
+                    className="w-full"
+                    onClick={() => {
+                      router.push("/subscribe");
+                    }}
+                  >
                     {plan.price === "Custom" ? "Contact Us" : "Get Started"}
                   </Button>
                 </CardFooter>
@@ -392,6 +411,9 @@ export default function Dashboard() {
               <Button
                 type="submit"
                 className="w-full bg-white text-blue-600 hover:bg-blue-50"
+                onClick={() => {
+                  confetti();
+                }}
               >
                 Subscribe
               </Button>
