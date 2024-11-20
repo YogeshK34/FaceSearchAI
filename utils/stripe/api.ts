@@ -3,7 +3,7 @@ import { db } from '../db/db';
 import { usersTable } from '../db/schema';
 import { eq } from "drizzle-orm";
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
-const PUBLIC_URL = process.env.NEXT_PUBLIC_WEBSITE_URL ? process.env.NEXT_PUBLIC_WEBSITE_URL : "http://localhost:3000"
+const PUBLIC_URL = process.env.NEXT_PUBLIC_WEBSITE_URL ? process.env.NEXT_PUBLIC_WEBSITE_URL : "https://face-search-ai-4qmn.vercel.app"
 export async function getStripePlan(email: string) {
 
     const user = await db.select().from(usersTable).where(eq(usersTable.email, email))
