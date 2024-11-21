@@ -33,7 +33,7 @@ export default function MyDropzone() {
         setImages((prevImages) => [...prevImages, ...newImages]);
       };
 
-      reader.readAsDataURL(file); // Convert file to base64
+      reader.readAsDataURL(file);
     });
   }, []);
 
@@ -59,16 +59,17 @@ export default function MyDropzone() {
         {images.map((image, index) => (
           <Card
             key={index}
-            className="w-64 m-4 shadow-md border border-gray-200"
+            className="w-64 m-4 shadow-md border border-gray-100"
           >
             <CardHeader className="p-0">
-              <Image
-                src={image.src as string}
-                alt={image.name}
-                width={400}
-                height={250}
-                className="rounded-t-lg object-cover h-40 w-full"
-              />
+              <div className="relative w-full h-40">
+                <Image
+                  src={image.src as string} // Ensure the src is a valid base64 string or URL
+                  alt={image.name}
+                  layout="fill" // Dynamically fills the parent container
+                  className="rounded-t-lg object-cover"
+                />
+              </div>
             </CardHeader>
             <CardContent className="p-4 text-center">
               <CardTitle className="truncate">{image.name}</CardTitle>
