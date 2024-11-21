@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -11,16 +11,27 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Search, Menu, X } from "lucide-react";
+import { Search, Menu, X, Upload } from "lucide-react";
 import { useRouter } from "next/navigation";
 import confetti from "canvas-confetti";
+import { useTheme } from "next-themes";
 
 export default function Dashboard() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const router = useRouter();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -163,6 +174,12 @@ export default function Dashboard() {
               >
                 <Search className="h-5 w-5" />
                 <span className="ml-2">Search</span>
+              </Button>
+            </div>
+            <div className="flex justify-center items-center mt-4 cursor-pointer">
+              <Button type="submit">
+                <Upload className="h-5 w-5" />
+                Upload
               </Button>
             </div>
           </div>
