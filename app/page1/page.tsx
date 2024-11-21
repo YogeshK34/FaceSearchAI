@@ -42,7 +42,7 @@ export default function Dashboard() {
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
                 <span className="text-2xl font-bold text-blue-600">
-                  FaceSearch
+                  FaceSearch AI
                 </span>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -268,7 +268,7 @@ export default function Dashboard() {
                 name: "John Doe",
                 role: "Security Analyst",
                 content:
-                  "FaceSearch has revolutionized our investigation process. It's fast, accurate, and easy to use.",
+                  "FaceSearch AI has revolutionized our investigation process. It's fast, accurate, and easy to use.",
                 image:
                   "https://th.bing.com/th/id/OIP.DjF9H3TvqUxOELr1AtF_cAAAAA?rs=1&pid=ImgDetMain",
               },
@@ -276,7 +276,7 @@ export default function Dashboard() {
                 name: "Jane Smith",
                 role: "Private Investigator",
                 content:
-                  "I've tried many face search tools, but FaceSearch is by far the most reliable and comprehensive.",
+                  "I've tried many face search tools, but FaceSearch AI is by far the most reliable and comprehensive.",
                 image:
                   "https://th.bing.com/th/id/OIP.2pLK8-jA5YlpsiF9sl3axwHaHa?w=600&h=600&rs=1&pid=ImgDetMain",
               },
@@ -284,7 +284,7 @@ export default function Dashboard() {
                 name: "Mike Johnson",
                 role: "Law Enforcement Officer",
                 content:
-                  "FaceSearch has become an indispensable tool in our daily operations. It's a game-changer.",
+                  "FaceSearch AI has become an indispensable tool in our daily operations. It's a game-changer.",
                 image:
                   "https://images.squarespace-cdn.com/content/v1/620e83835f7c485d7d85b295/1f6749da-8b44-40c6-b656-fd5d4cda7baf/Matthew+Lacasse+Headshot.png",
               },
@@ -410,7 +410,7 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-              Stay updated with FaceSearch
+              Stay updated with FaceSearch AI
             </h2>
             <p className="mt-4 text-lg text-blue-100">
               Get the latest news, updates, and tips delivered straight to your
@@ -632,7 +632,7 @@ export default function Dashboard() {
               </a>
             </div>
             <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              &copy; 2024 FaceSearch, Inc. All rights reserved.
+              &copy; 2024 FaceSearch AI, Inc. All rights reserved.
             </p>
           </div>
         </div>
