@@ -15,6 +15,7 @@ import { Search, Menu, X, Upload } from "lucide-react";
 import { useRouter } from "next/navigation";
 import confetti from "canvas-confetti";
 import { useTheme } from "next-themes";
+import MyDropzone from "@/components/Drag&Drop";
 
 export default function Dashboard() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -177,10 +178,7 @@ export default function Dashboard() {
               </Button>
             </div>
             <div className="flex justify-center items-center mt-4 cursor-pointer">
-              <Button type="submit">
-                <Upload className="h-5 w-5" />
-                Upload
-              </Button>
+              <MyDropzone />
             </div>
           </div>
         </div>
